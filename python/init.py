@@ -21,7 +21,7 @@ try:
                 line = line.replace("\n", "")
                 line = re.sub("\s+", " ", line)
                 texte = cur.execute(line)
-
+                
     with open('sql_file/create.sql') as f:
         fichier = f.read()
         lines = fichier.split(";")
