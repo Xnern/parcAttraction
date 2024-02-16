@@ -1,0 +1,21 @@
+<mat-dialog-content class="modal-content">
+  <h2>Ajouter une critique</h2>
+  <form [formGroup]="critiqueForm" class="critique-form">
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Prénom" formControlName="prenom">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Nom" formControlName="nom">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput type="number" placeholder="Note" formControlName="note" min="1" max="5">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <textarea matInput placeholder="Commentaire" formControlName="commentaire" rows="5"></textarea>
+    </mat-form-field>
+    <div class="button-container">
+      <button mat-button color="primary" (click)="ajouterCritique()">Ajouter</button>
+      <button mat-button color="warn" (click)="fermerModale()">Annuler</button>
+    </div>
+  </form>
+</mat-dialog-content>
