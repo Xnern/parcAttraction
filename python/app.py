@@ -83,7 +83,7 @@ def getAllCritique():
     return result, 200
 
 @app.get('/critique/<int:index>')
-def getCritique(index):
+def get_critique(index):
     result = critique.get_critique(index)
     return result, 200
 

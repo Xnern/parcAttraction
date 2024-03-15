@@ -33,4 +33,10 @@ export class CritiqueService {
       return data as Observable<MessageInterface>;
     }
 
+    public getCritique(critique_id: number): Observable<CritiqueInterface> {
+      const url = "http://localhost:5000/critique/" + critique_id;
+      const data = this.dataService.getData(url);
+      return data as Observable<CritiqueInterface>;
+    }
+
 }

@@ -17,6 +17,9 @@
         <span>{{attraction.description}}</span>
         <span>{{attraction.difficulte}} / 5</span>
         <span mat-button (click)="openModal(attraction.attraction_id ?? 0)">Ajouter une critique</span>
+
+        <!-- Bouton pour afficher la critique -->
+        <a [routerLink]="['/critique', attraction.attraction_id]">Voir les critiques</a>
       </div>
     </ng-container>
   </mat-card-content>
