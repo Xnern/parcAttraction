@@ -1,24 +1,64 @@
-.attraction-title {
-  font-size: 18px;
-  font-weight: 500;
-  background-color: darkgrey;
-  width: fit-content;
-  margin-top: 25px;
+/* Styles généraux pour la mat-card */
+mat-card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour un effet 3D */
+  margin: 2rem; /* Espacement autour de la carte */
+  border-radius: 8px; /* Bordures arrondies */
 }
-.attraction {
-  display: flex;
-  align-items: center;
-  column-gap: 25px;
-  width: fit-content;
 
-  border-bottom: solid 1px grey;
-  span {
-    padding: 5px;
-    width: 250px;
-  }
-  .champ {
-    padding: 5px;
-    margin-top: 21.5px;
-    width: 250px;
-  }
+mat-card-header {
+  background-color: #673ab7; /* Pourpre foncé */
+  color: #ffffff; /* Texte blanc */
+  padding: 16px; /* Espacement interne */
+  border-top-left-radius: 8px; /* Arrondi pour s'aligner à la carte */
+  border-top-right-radius: 8px; /* Arrondi pour s'aligner à la carte */
+}
+
+mat-card-title {
+  font-size: 1.25rem; /* Taille de police augmentée */
+}
+
+mat-card-content {
+  padding: 20px; /* Espacement interne */
+}
+
+.attraction {
+  display: flex; /* Flexbox pour aligner les éléments de formulaire */
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+  gap: 20px; /* Espacement entre les éléments */
+}
+
+.mat-form-field {
+  flex-grow: 1; /* Les champs prennent toute la place disponible */
+  min-width: 250px; /* Largeur minimale pour chaque champ */
+}
+
+.mat-slide-toggle {
+  align-self: center; /* Centre le toggle verticalement */
+}
+
+button[mat-button] {
+  background-color: #3f51b5; /* Bleu indigo */
+  color: white; /* Texte blanc */
+  border-radius: 4px; /* Bordures arrondies */
+  padding: 10px 15px; /* Espacement interne */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Ombre légère pour un effet en profondeur */
+  transition: background-color 0.3s; /* Transition douce pour l'interaction */
+}
+
+button[mat-button]:hover {
+  background-color: #303f9f; /* Bleu un peu plus foncé au survol */
+}
+
+button[mat-button]:active {
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* Effet enfoncé lors du clic */
+}
+
+/* Styles pour améliorer l'apparence des boutons d'ajout et d'enregistrement */
+button[mat-button] {
+  margin: 0.5rem 0; /* Espacement vertical */
+}
+
+/* Styles spécifiques pour les champs d'entrée pour améliorer la clarté */
+input[matInput] {
+  padding: 0.5rem; /* Espacement interne pour faciliter la saisie */
 }

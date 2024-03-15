@@ -1,0 +1,40 @@
+/* Styles de base du tableau */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Fusionne les bordures */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère pour un effet "flottant" */
+  background-color: #ffffff; /* Arrière-plan blanc pour le contraste */
+  margin-top: 20px; /* Espacement en haut */
+}
+
+/* Styles des entêtes */
+thead th {
+  background-color: #007bff; /* Bleu Bootstrap */
+  color: #ffffff; /* Texte blanc */
+  text-align: left; /* Alignement du texte */
+  padding: 12px 15px; /* Espacement interne */
+}
+
+/* Styles des lignes et cellules */
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Alternance des couleurs pour les lignes */
+}
+
+tbody tr:hover {
+  background-color: #ddd; /* Couleur au survol */
+}
+
+td {
+  padding: 12px 15px; /* Espacement interne pour les cellules */
+  border-bottom: 1px solid #ddd; /* Bordure en bas de chaque cellule */
+}
+
+/* Styles pour les notes */
+td:nth-child(2) {
+  font-weight: bold; /* Mise en évidence de la note */
+}
+
+/* Styles pour les commentaires */
+td:nth-child(3) {
+  color: #555; /* Couleur plus douce pour le texte des commentaires */
+}

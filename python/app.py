@@ -82,9 +82,9 @@ def getAllCritique():
     result = critique.get_all_critique()
     return result, 200
 
-@app.get('/critique/<int:index>')
-def get_critique(index):
-    result = critique.get_critique(index)
+@app.get('/critique/attraction/<int:index>')
+def get_critique_attraction(index):
+    result = critique.get_critique_by_attraction(index)
     return result, 200
 
 @app.delete('/critique/<int:index>')

@@ -1,19 +1,72 @@
-.attraction-title {
-  font-size: 18px;
-  font-weight: 500;
-  background-color: darkgrey;
-  width: fit-content;
-  margin-top: 25px;
+/* Styles généraux pour la mat-card */
+mat-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée pour un effet 3D */
+  margin: 20px auto; /* Centrage avec une marge */
+  width: 90%; /* Largeur de la carte */
+  max-width: 800px; /* Largeur maximale pour les grands écrans */
 }
-.attraction {
-  display: flex;
-  align-items: center;
-  column-gap: 25px;
-  width: fit-content;
 
-  border-bottom: solid 1px grey;
-  span {
-    padding: 5px;
-    width: 250px;
-  }
+mat-card-header {
+  background-color: #005792; /* Couleur d'arrière-plan de l'entête */
+  color: #ffffff; /* Texte blanc pour l'entête */
+}
+
+mat-card-title {
+  font-size: 24px; /* Taille de la police pour le titre */
+}
+
+mat-card-content {
+  padding: 20px; /* Espacement interne pour le contenu */
+}
+
+.attraction {
+  border-bottom: 1px solid #eee; /* Ligne de séparation subtile */
+  padding: 15px 0; /* Espacement vertical */
+}
+
+.attraction span {
+  display: block; /* Affichage en bloc pour occuper toute la largeur */
+  margin-bottom: 8px; /* Espacement entre les éléments */
+}
+
+.attraction span:last-child {
+  margin-bottom: 0; /* Pas d'espacement en bas du dernier élément */
+}
+
+/* Styles pour les boutons et liens */
+.attraction mat-button, .attraction a {
+  background-color: #007bff; /* Bleu pour les boutons et liens */
+  color: #ffffff; /* Texte blanc */
+  padding: 6px 12px; /* Espacement interne */
+  border-radius: 4px; /* Bordures arrondies */
+  text-decoration: none; /* Pas de soulignement pour les liens */
+  display: inline-block; /* Permet le positionnement en ligne */
+  margin-top: 10px; /* Espacement au-dessus des boutons */
+}
+
+.attraction mat-button:hover, .attraction a:hover {
+  background-color: #0056b3; /* Couleur au survol */
+  color: #ffffff; /* Maintenir le texte blanc au survol */
+}
+
+/* Style pour le span utilisant mat-button pour ajouter une critique */
+span[mat-button] {
+  cursor: pointer; /* Change le curseur en main pour indiquer la possibilité de cliquer */
+  background-color: #4CAF50; /* Couleur de fond verte pour une action positive */
+  color: white; /* Couleur du texte blanc pour le contraste */
+  padding: 10px 15px; /* Espacement interne pour une meilleure surface de clic */
+  margin-top: 10px; /* Marge au-dessus du bouton pour le séparer des éléments au-dessus */
+  border-radius: 5px; /* Bordures arrondies pour un look moderne */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Ombre portée légère pour un effet 3D subtil */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transition douce pour l'interaction */
+}
+
+span[mat-button]:hover {
+  background-color: #45a049; /* Assombrir le bouton au survol pour indiquer l'interaction */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée pour l'effet au survol */
+}
+
+span[mat-button]:active {
+  background-color: #3e8e41; /* Couleur plus foncée lors du clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre réduite pour l'effet enfoncé */
 }
